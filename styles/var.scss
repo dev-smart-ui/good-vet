@@ -1,0 +1,57 @@
+$font-secondary: var(--font-goldman);
+$font-primary: 'font';
+
+$xs: 370px;
+$sm: 576px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1440px;
+$xxl: 1720px;
+
+$gray: #c6cdd4;
+$grayDark: #6f6f6f;
+$white: #ffffff;
+$black: #1e1e1e;
+$active: #6eb800;
+$grayLight: #ffffff60;
+$graySecond: #656565;
+
+// fonts
+$fontText: $font-primary;
+$fontTitle: $font-secondary;
+
+@mixin xs {
+  @media (min-width: $xs) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: $sm) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: $md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: $lg) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: $xl) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (min-width: $xxl) {
+    @content;
+  }
+}
