@@ -45,6 +45,10 @@
   gap: 5px;
 }
 
+.phoneError {
+  border: 2px solid red;
+}
+
 .inputWrapper {
   width: 100%;
   height: 68px;
@@ -139,6 +143,9 @@
             background-color: $lightBlue;
           }
         }
+      }
+      &.selectError {
+        border: 2px solid red;
       }
     }
   }
