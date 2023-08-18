@@ -39,6 +39,8 @@ const RegisterForm = () => {
 		console.log(data)
 	}
 
+	console.log(errors)
+
 	return (
 		<div className={styles.wrapper}>
 			<h5>
@@ -95,7 +97,7 @@ const RegisterForm = () => {
 									placeholder='1-516-395-4024'
 									countrySelectComponent={() => {}}
 									value={value}
-									className={error ? styles.error : ''}
+									className={errors.phone ? styles.phoneError : ''}
 									{...rest}
 								/>
 							)
@@ -114,7 +116,7 @@ const RegisterForm = () => {
 									isMulti={false}
 									isSearchable={false}
 									placeholder="Location"
-									className="customSelectClass"
+									className={`customSelectClass ${errors.location ? 'selectError' : ''}`}
 									classNamePrefix='controlCustomClass'
 									components={{DropdownIndicator: () => <Icon type='TRIANGLE_BLACK'/>}}
 									options={locations}

@@ -16,6 +16,12 @@ const ICONS  = {
 				fill="black"/>
 		</svg>
 	),
+	PLAY_BUTTON: (props) => (
+		<svg width="56" height="57" viewBox="0 0 56 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<rect x="-1.52588e-05" y="0.740479" width="56" height="56" rx="28" fill="#FEC20D"/>
+			<path d="M23 22.3655V35.1155L33 28.7405L23 22.3655Z" fill="black"/>
+		</svg>
+	)
 }
 
 const Icon = ({ type, ...props }) => {
