@@ -1,0 +1,152 @@
+@import 'styles/var';
+
+.wrapper {
+  width: 100%;
+  padding: 18px 20px;
+  background: $lightBlue;
+
+  @include lg {
+    width: 40%;
+  }
+
+  h5 {
+    font-weight: 400;
+    margin: 0 0 27px 0;
+    font-size: 32px;
+
+    @include lg {
+      font-size: 52px;
+    }
+
+    .superscript {
+      font-size: 0.7em;
+      vertical-align: super;
+      position: relative;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 34px 0;
+
+    @include lg {
+      font-size: 24px;
+    }
+  }
+}
+
+.registerForm {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.inputWrapper {
+  width: 100%;
+  height: 68px;
+  position: relative;
+
+  @media (min-width: 1200px) {
+    width: 49%;
+  }
+
+  label {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  input {
+    width: 100%;
+    border: none;
+    height: 100%;
+    font-size: 18px;
+    padding: 20px 0 0;
+    text-indent: 15px;
+    font-weight: 400;
+
+    &::placeholder {
+      font-size: 18px;
+    }
+
+    &.error {
+      border: 2px solid red;
+    }
+  }
+
+  &.inputFullWidth {
+    width: 100%;
+  }
+
+  :global {
+    .PhoneInput {
+      height: 100%;
+    }
+  }
+
+  :global {
+    .customSelectClass {
+      height: 100%;
+      width: 100%;
+
+      .controlCustomClass {
+
+        &__control {
+          height: 100%;
+        }
+
+        &__indicators {
+          span {
+            display: none;
+          }
+        }
+
+        &__indicator {
+          display: none;
+        }
+
+        &__control {
+          height: 100%;
+          width: 100%;
+        }
+
+        &__value-container {
+          text-align: left;
+          padding: 2px 15px;
+          font-size: 18px;
+        }
+
+        &__placeholder {
+          font-size: 18px;
+        }
+
+        &__option {
+          background-color: transparent;
+          font-size: 18px;
+
+          &--is-selected {
+            background-color: $lightBlue;
+            color: black;
+          }
+
+          &:hover, &active {
+            background-color: $lightBlue;
+          }
+        }
+      }
+    }
+  }
+
+  svg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+}

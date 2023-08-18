@@ -1,0 +1,28 @@
+@import "styles/var";
+
+.wrapper {
+  margin: 40px 0;
+  width: 100%;
+  text-align: center;
+
+  h1 {
+    font-size: 32px;
+
+    @include lg {
+      font-size: 52px;
+    }
+  }
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  padding-bottom: 100px;
+  gap: 25px 10px;
+
+  @include lg {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

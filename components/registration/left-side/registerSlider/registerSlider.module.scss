@@ -1,0 +1,60 @@
+@import "styles/var";
+
+.swiperWrapper {
+  max-width: 100%;
+
+  @include md {
+    max-width: 590px;
+  }
+
+  :global {
+    .swiper-slide {
+      width: 100%;
+      padding: 0 60px;
+
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      top: 40%;
+      color: $yellow;
+
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 0;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-left: 16px solid transparent;
+        border-right: 16px solid transparent;
+        border-bottom: 28px solid $yellow; /* Желтый треугольник */
+      }
+    }
+
+    .swiper-button-next {
+      &::before {
+        transform: rotate(90deg);
+      }
+    }
+
+    .swiper-button-prev {
+      &::before {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
+
+.review {
+  padding-bottom: 30px;
+}
+
+.author {
+  font-style: italic;
+}
