@@ -1,5 +1,5 @@
 $font-secondary: var(--font-goldman);
-$font-primary: 'font';
+$font-primary: 'Montserrat', 'san-serif';
 
 $xs: 370px;
 $sm: 576px;
@@ -9,12 +9,14 @@ $xl: 1440px;
 $xxl: 1720px;
 
 $gray: #c6cdd4;
-$grayDark: #6f6f6f;
+$grayDark: #7a7a7a;
 $white: #ffffff;
 $black: #1e1e1e;
 $active: #6eb800;
 $grayLight: #ffffff60;
 $graySecond: #656565;
+$yellow: #FDBD39;
+$lightBlue: #C0E3EE;
 
 // fonts
 $fontText: $font-primary;

@@ -12,9 +12,6 @@ html {
   padding: 0;
   font-size: 18px;
   font-weight: 400;
-  background-color: $black;
-  color: $white;
-  background-image: url('/images/lines.png');
   background-position: center;
   font-family: $font-primary !important;
 }
@@ -25,15 +22,6 @@ h3,
 h4 {
   margin: 0;
   font-family: $font-secondary;
-}
-
-h1 {
-  font-size: 27px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-  @include lg {
-    font-size: 35px;
-  }
 }
 
 main {
@@ -127,32 +115,6 @@ ul {
 
 .Toastify__toast--error {
   background: #2e2e2e !important;
-}
-
-* {
-  &::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-    @include md {
-      width: 8px;
-      height: 8px;
-    }
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: $active;
-    border: 1px solid black;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px 0 0 10px;
-  }
-
-  &::-webkit-scrollbar-thumb:horizontal {
-    border-radius: 10px 10px 0 0;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
 }
 
 button {

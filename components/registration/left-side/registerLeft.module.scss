@@ -1,0 +1,9 @@
+@import "styles/var";
+
+.wrapper {
+  width: 100%;
+
+  @include lg {
+    width: 60%;
+  }
+}

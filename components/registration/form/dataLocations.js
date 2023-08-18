@@ -1,0 +1,18 @@
+export const locations = [
+	{ value: 'atlanta', label: 'Atlanta' },
+	{ value: 'miami', label: 'Miami' },
+	{ value: 'charleston', label: 'Charleston' },
+	{ value: 'nashville', label: 'Nashville' },
+	{ value: 'charlotte', label: 'Charlotte' },
+	{ value: 'new-york city', label: 'New-York City' },
+	{ value: 'chicago', label: 'Chicago' },
+	{ value: 'palm beach country', label: 'Palm Beach Country' },
+	{ value: 'columbus', label: 'Columbus' },
+	{ value: 'phoenix', label: 'Phoenix' },
+	{ value: 'raleigh', label: 'Raleigh' },
+	{ value: 'denver', label: 'Denver' },
+	{ value: 'sarasota', label: 'Sarasota' },
+	{ value: 'fort lauderdale', label: 'Fort Lauderdale' },
+	{ value: 'tampa', label: 'Tampa' },
+	{ value: 'kansas city', label: 'Kansas City' },
+]
