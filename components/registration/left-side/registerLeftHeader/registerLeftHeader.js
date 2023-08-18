@@ -8,12 +8,8 @@ const RegisterLeftHeader = () => {
 	const [isPlaying, setIsPlaying] = useState(false)
 	const videoRef = useRef(null)
 
-	const handlePlayPause = () => {
-		videoRef.current.play()
-		setIsPlaying(true)
-	}
-
 	const handleVideoPlay = () => {
+		videoRef.current.play()
 		setIsPlaying(true)
 	}
 
@@ -40,7 +36,7 @@ const RegisterLeftHeader = () => {
 				</video>
 
 				{!isPlaying && (
-					<button className={styles.playButton} onClick={handlePlayPause}>
+					<button className={styles.playButton} onClick={handleVideoPlay}>
 						<span>Bigger, Brighter, Fresher</span>
 						<Icon type='PLAY_BUTTON'/>
 					</button>
