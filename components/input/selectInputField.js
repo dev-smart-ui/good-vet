@@ -8,6 +8,7 @@ const Select = dynamic(() => import('react-select'), {
 })
 
 const SelectField = ({ label, id, error, control, options, placeholder }) => {
+
 	return (
 		<div className={`${styles.inputWrapper} ${styles.inputFullWidth}`}>
 			<label htmlFor={id}>{label}</label>
