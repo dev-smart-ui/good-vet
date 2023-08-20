@@ -61,7 +61,7 @@ const RegisterForm = () => {
 					type='email'
 					placeholder='johndoemith@gmail.com'
 					error={errors.email}
-					registerOptions={...register("email", { required: true })}
+					registerOptions={{...register("email", { required: true })}}
 				/>
 
 				<PhoneInputField label="Phone:" id="phone" error={errors.phone} control={control} />
@@ -74,7 +74,7 @@ const RegisterForm = () => {
 					type='text'
 					placeholder='ex: dog biscuit, bone, cookie'
 					error={errors.petsTreat}
-					registerOptions={...register("petsTreat", { required: true })}
+					registerOptions={{...register("petsTreat", { required: true })}}
 				/>
 
 				<YellowButton type='submit'>Continue Booking</YellowButton>
