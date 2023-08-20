@@ -22,6 +22,14 @@ const RegisterForm = () => {
 	} = useForm({
 		resolver: zodResolver(validationSchema),
 		shouldFocusError: false,
+		defaultValues: {
+			firstName: '',
+			lastName: '',
+			email: '',
+			phone: '',
+			location: null,
+			petsTreat: '',
+		}
 	})
 
 	const onSubmit = (data) => {
@@ -64,9 +72,9 @@ const RegisterForm = () => {
 					registerOptions={{...register("email", { required: true })}}
 				/>
 
-				<PhoneInputField label="Phone:" id="phone" error={errors.phone} control={control} />
+				<PhoneInputField label="Phone:" id="phone" control={control} />
 
-				<SelectField label="" id="location" error={errors.location} control={control} options={locations} placeholder="Location" />
+				<SelectField label="" id="location" control={control} options={locations} placeholder="Location" />
 
 				<InputField
 					label='Your Pet&apos;s Favorite Treat:'
@@ -80,7 +88,6 @@ const RegisterForm = () => {
 				<YellowButton type='submit'>Continue Booking</YellowButton>
 
 			</form>
-			
 		</div>
 	)
 }

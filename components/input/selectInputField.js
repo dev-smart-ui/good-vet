@@ -7,15 +7,14 @@ const Select = dynamic(() => import('react-select'), {
 	ssr: false,
 })
 
-const SelectField = ({ label, id, error, control, options, placeholder }) => {
-
+const SelectField = ({ label, id, control, options, placeholder }) => {
 	return (
 		<div className={`${styles.inputWrapper} ${styles.inputFullWidth}`}>
 			<label htmlFor={id}>{label}</label>
 			<Controller
 				name={id}
 				control={control}
-				render={({ field }) => {
+				render={({ field, fieldState: { error }  }) => {
 					return (
 						<Select
 							{...field}
