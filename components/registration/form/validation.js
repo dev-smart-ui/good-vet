@@ -7,7 +7,12 @@ export const validationSchema = z
 		email: string({ required_error: "Email is required" }).email({
 			message: "Should be a valid Email",
 		}),
-		phone: z.string().min(10).max(14).nonempty('Phone number is required'),
+		phone: z.string()
+			.nonempty('Phone number is required')
+			.refine(
+				(value) => (value.match(/\d/g) || []).length === 11,
+				"Phone number should have exactly 11 digits"
+			),
 		petsTreat: string().nonempty('Field is required'),
 		location: z.object({
 			value: z.string().refine((value) => value !== "", "Select location"),
