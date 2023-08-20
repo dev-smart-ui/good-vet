@@ -1,24 +1,7 @@
-import {forwardRef} from "react"
 import styles from "../registration/form/registerForm.module.scss"
 
 import {Controller} from "react-hook-form"
-import InputMask from 'react-input-mask'
-
-const PhoneInput = forwardRef(({value, onChange, className, ...rest}, ref) => {
-	return (
-		<InputMask
-			mask='1-999-999-9999'
-			maskChar={null}
-			value={value}
-			placeholder='1-516-395-4024'
-			onChange={onChange}
-			className={className}
-			ref={ref}
-			{...rest}>
-		</InputMask>
-	)
-})
-PhoneInput.displayName = "PhoneInput"
+import { PatternFormat } from 'react-number-format'
 
 const PhoneInputField = ({ label, id, control }) => {
 	return (
@@ -28,15 +11,18 @@ const PhoneInputField = ({ label, id, control }) => {
 				control={control}
 				name={id}
 				render={(
-					{ field: { value, ...rest },
+					{ field: { value, ref, ...rest },
 						fieldState: { error } }) => {
 					return (
-						<PhoneInput
+						<PatternFormat
 							id={id}
+							format="1 ### ### ####"
 							value={value}
+							getInputRef={ref}
+							placeholder='1-516-395-4024'
 							className={`customSelectClass ${error ? 'selectError' : ''}`}
-							{...rest}>
-						</PhoneInput>
+							{...rest}
+						/>
 					)
 				}}
 			/>
