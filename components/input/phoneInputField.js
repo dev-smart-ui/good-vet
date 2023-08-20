@@ -2,8 +2,9 @@ import styles from "../registration/form/registerForm.module.scss"
 
 import {Controller} from "react-hook-form"
 import { PatternFormat } from 'react-number-format'
-
 const PhoneInputField = ({ label, id, control }) => {
+
+
 	return (
 		<div className={styles.inputWrapper}>
 			<label htmlFor={id}>{label}</label>
@@ -16,7 +17,7 @@ const PhoneInputField = ({ label, id, control }) => {
 					return (
 						<PatternFormat
 							id={id}
-							format="1 ### ### ####"
+							format="1-###-###-####"
 							value={value}
 							getInputRef={ref}
 							placeholder='1-516-395-4024'
